@@ -1,0 +1,137 @@
+:root {
+    --color-primary: #1876F2;
+    --background-chat: #fff;/*linear-gradient(to bottom, #c8c6c6 6%, #e7e7e7 70%);*/
+}
+
+.chat_icon{
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 60px;
+    z-index: 1000;
+    cursor: pointer;
+}
+.btn{
+    cursor: pointer;
+}
+.tf-btn{
+    background: white;
+}
+.chatbot-box{
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    background: var(--background-chat);
+    width: 400px;
+    height: 70vh;
+    border-radius: 15px;
+    padding: 30px;
+    font-size: 16px;
+    box-shadow: 0 0 11px rgba(0,0,0,0.4);
+    z-index: 100000;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.chatbot-box.active{
+    transform: scaleY(1);
+}
+
+#chatList{
+    height: calc(80vh - 140px);
+    overflow: auto;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: auto;
+}
+
+#chatList::-webkit-scrollbar{
+    /*display: none;*/
+}
+
+#chatList ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    max-height: 100%;
+}
+
+#chatList ul li.admin-message{
+    background-color: white;
+    color: #515151;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 20px ;
+    margin: 15px 30% 15px 5px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+#chatList ul li.client-message{
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px 1px 20px 20px;
+    margin: 15px 5px 15px 30%;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.message-box-wrap{
+    position: relative;
+    margin-top: 20px;
+}
+
+.message-box input[type="text"]{
+    height: 20px;
+    padding: 10px;
+    line-height: 20px;
+    width: calc(100% - 70px);
+    border-radius: 10px;
+    border: 1px solid #bcb3b3;
+}
+
+.message-box select{
+    height: 40px;
+    padding: 10px;
+    line-height: 20px;
+    width: calc(100% - 50px);
+    border-radius: 10px;
+    border: 1px solid #bcb3b3;
+}
+
+.message-box button{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    border: 1px solid #bcb3b3;
+}
+
+#send{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    border: 0 !important;
+    outline: 0 !important;
+    pointer-events: none;
+}
+
+.admin-client-message-wrap, 
+#submit_info_form{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+

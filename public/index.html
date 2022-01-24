@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="css/chatBot.css">
+</head>
+<body>
+<!-- Chat bot start -->
+<div class="chat_icon">
+    <img src="images/chat.png" alt="chat">
+</div>
+
+<div class="chatbot-box">
+    <div id="chatList">
+        <ul>
+            <!-- <li class="admin-message" >XYZ</li>
+            <li class="client-message" >XYZ</li> -->
+        </ul>
+    </div>
+    <div class="message-box-wrap">
+        <div class="message-box">
+           <input type="text" name="msg-normal" data-question="normal message">
+        </div>
+        <button class="btn" id="send">▶</button>
+    </div>
+
+    <div class="admin-client-message-wrap">
+        <select name="service" data-question="¿Qué servicio desea?">
+            <option>Please select</option>
+            <option>Web Design</option>
+            <option>Web Development</option>
+        </select>
+        <input type="text" name="name" data-question="¿Cuál es su nombre?">
+        <input type="text" name="email" data-question="¿Cuál es su email?" data-name required>
+        <input type="text" name="dni" data-question="¿Cuál es su dni?">
+        <input type="text" name="telefono" data-question="¿Cuál es su teléfono?">
+        <div data-question="Confirmar">
+            <button class="btn tf-btn" id="confirm">Sí</button>
+            <button class="btn tf-btn" id="notconfirm">No</button>
+        </div>
+        
+    </div>
+
+    <form id="submit_info_form">
+        <div class="submit_info"></div>
+        <input type="submit" value="Send" id="submit" name="">
+    </form>
+
+</div>
+
+<!-- Chat bot end -->
+
+  <!-- OPCION 2 -->
+  <script src="/__/firebase/7.22.0/firebase.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/chatBot.js"></script>
+
+</body>
+</html>
